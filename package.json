@@ -63,7 +63,7 @@
         "mocha": "~8.2.0",
         "q": "~1.4.1",
         "sinon": "~1.16.1",
-        "sinon-chai": "~2.8.0"
+        "sinon-chai": "~2.14.0"
     },
     "license": "MIT",
     "engines": {
