@@ -59,10 +59,10 @@
         "object-assign": "~4.1.0"
     },
     "devDependencies": {
-        "chai": "3.2.0",
+        "sinon": "~1.17.7",
+        "chai": "3.5.0",
         "mocha": "~8.2.0",
         "q": "~1.4.1",
-        "sinon": "~1.17.7",
         "sinon-chai": "~2.14.0"
     },
     "license": "MIT",
