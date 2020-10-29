@@ -1,69 +1,73 @@
 {
-  "name": "trello",
-  "version": "0.10.1-rc.0",
-  "author": "Norbert Eder <opensource@norberteder.com>",
-  "description": "This module provides an easy way to make requests to the Trello API.",
-  "contributors": [
-    {
-      "name": "Graeme Foster",
-      "email": "graemef@gmail.com"
+    "name": "trello-new",
+    "version": "0.10.1",
+    "author": "mmoomocow",
+    "description": "This module provides an easy way to make requests to the Trello API.",
+    "contributors": [
+        {
+            "name": "Norbert Eder",
+            "email": "opensource@norberteder.com"
+        },
+        {
+            "name": "Graeme Foster",
+            "email": "graemef@gmail.com"
+        },
+        {
+            "name": "Mike Beasley",
+            "email": "mbeasley@emcien.com"
+        },
+        {
+            "name": "Dario Kondratiuk",
+            "email": "dariokondratiuk@gmail.com"
+        },
+        {
+            "name": "Sean Madden",
+            "email": "sdm350@gmail.com"
+        },
+        {
+            "name": "Siôn Le Roux",
+            "email": "sinisterstuf@gmail.com"
+        },
+        {
+            "name": "Mike Garuccio",
+            "url": "https://github.com/mgaruccio"
+        },
+        {
+            "name": "Karel Piwko",
+            "url": "https://github.com/kpiwko"
+        },
+        {
+            "name": "Aaron Sherrill",
+            "url": "https://github.com/motionharvest"
+        }
+    ],
+    "scripts": {
+        "test": "node node_modules/mocha/bin/mocha"
     },
-    {
-      "name": "Mike Beasley",
-      "email": "mbeasley@emcien.com"
+    "main": "main.js",
+    "homepage": "https://github.com/mmoomocow/trello",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mmoomocow/trello.git"
     },
-    {
-      "name": "Dario Kondratiuk",
-      "email": "dariokondratiuk@gmail.com"
+    "keywords": [
+        "trello"
+    ],
+    "dependencies": {
+        "es6-promise": "~3.0.2",
+        "needle": "^2.4.0",
+        "object-assign": "~4.1.0"
     },
-    {
-      "name": "Sean Madden",
-      "email": "sdm350@gmail.com"
+    "devDependencies": {
+        "chai": "3.2.0",
+        "mocha": "~2.3.2",
+        "q": "~1.4.1",
+        "sinon": "~1.16.1",
+        "sinon-chai": "~2.8.0"
     },
-    {
-      "name": "Siôn Le Roux",
-      "email": "sinisterstuf@gmail.com"
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.10.x"
     },
-    {
-      "name": "Mike Garuccio",
-      "url": "https://github.com/mgaruccio"
-    },
-    {
-      "name": "Karel Piwko",
-      "url": "https://github.com/kpiwko"
-    },
-    {
-      "name": "Aaron Sherrill",
-      "url": "https://github.com/motionharvest"
-    }
-  ],
-  "scripts": {
-    "test": "node node_modules/mocha/bin/mocha"
-  },
-  "main": "main.js",
-  "homepage": "https://github.com/norberteder/trello",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/norberteder/trello.git"
-  },
-  "keywords": [
-    "trello"
-  ],
-  "dependencies": {
-    "es6-promise": "~3.0.2",
-    "needle": "^2.4.0",
-    "object-assign": "~4.1.0"
-  },
-  "devDependencies": {
-    "mocha": "~2.3.2",
-    "chai": "3.2.0",
-    "sinon": "~1.16.1",
-    "sinon-chai": "~2.8.0",
-    "q": "~1.4.1"
-  },
-  "license": "MIT",
-  "engines": {
-    "node": ">= 0.10.x"
-  },
-  "optionalDependencies": {}
+    "optionalDependencies": {}
 }
