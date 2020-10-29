@@ -1,122 +1,132 @@
-[![Build Status](https://travis-ci.org/norberteder/trello.svg?branch=master)](https://travis-ci.org/norberteder/trello)
-
 # trello
+
+![Node.js CI](https://github.com/mmoomocow/trello/workflows/Node.js%20CI/badge.svg)
+
 ## A simple asynchronous client for [Trello](http://www.trello.com)
+
+This is a clone of the (now stale) [Trello Package](https://github.com/norberteder/trello). 
+
+This was made as the author wasn't fixing bugs and there were security vunerabilities in the project.
 
 This is a wrapper for some of the Trello HTTP API. Please feel free to add any other pieces you need! :)
 
 ## Installation
+
     npm install trello
 
 ## Usage
-Log in to Trello and visit [trello.com/app-key](https://trello.com/app-key) to get a `token` and `app key`. These need to be supplied when you create the Trello object (see below).
+
+Log in to Trello and visit [trello.com/app-key](https://trello.com/app-key) to get a `token` and `app key` . These need to be supplied when you create the Trello object (see below).
 
 ## Example
-```javascript
+
+``` javascript
   var Trello = require("trello");
   var trello = new Trello("MY APPLICATION KEY", "MY USER TOKEN");
 
   trello.addCard('Clean car', 'Wax on, wax off', myListId,
-      function (error, trelloCard) {
+      function(error, trelloCard) {
           if (error) {
               console.log('Could not add card:', error);
-          }
-          else {
+          } else {
               console.log('Added card:', trelloCard);
           }
       });
 ```
 
 ## Callback or promise
+
 API calls can either execute a callback or return a promise. To return a promise just omit the callback parameter.
 
-```javascript
+``` javascript
   //Callback
   trello.getCardsOnList(listId, callback);
 
   //Promise
   var cardsPromise = trello.getCardsOnList(listId);
   cardsPromise.then((cards) => {
-    //do stuff
+      //do stuff
   })
 ```
 
 ## Requests to API endpoints, not supported by this lib yet
 
-```javascript
+``` javascript
     // Get all registered tokens and webhooks
     // Url will look like: https://api.trello.com/1/members/me/tokens?webhooks=true&key=YOURKEY&token=YOURTOKEN
-    trello.makeRequest('get', '/1/members/me/tokens', { webhooks: true })
-      .then((res) => {
-          console.log(res)
-      });
+    trello.makeRequest('get', '/1/members/me/tokens', {
+            webhooks: true
+        })
+        .then((res) => {
+            console.log(res)
+        });
 ```
 
 ## Available functions
 
 ### Add
 
-* addAttachmentToCard 
-* addBoard 
-* addCard 
-* addCardWithExtraParams 
-* addChecklistToCard 
-* addCommentToCard 
-* addDueDateToCard 
-* addExistingChecklistToCard 
-* addItemToChecklist 
-* addLabelOnBoard 
-* addLabelToCard 
-* addListToBoard 
-* addMemberToBoard 
-* addMemberToCard 
-* addStickerToCard 
-* addWebhook 
+* addAttachmentToCard
+* addBoard
+* addCard
+* addCardWithExtraParams
+* addChecklistToCard
+* addCommentToCard
+* addDueDateToCard
+* addExistingChecklistToCard
+* addItemToChecklist
+* addLabelOnBoard
+* addLabelToCard
+* addListToBoard
+* addMemberToBoard
+* addMemberToCard
+* addStickerToCard
+* addWebhook
 * copyBoard
 
 ### Delete
 
-* deleteCard 
-* deleteLabel 
-* deleteLabelFromCard 
-* deleteWebhook 
+* deleteCard
+* deleteLabel
+* deleteLabelFromCard
+* deleteWebhook
 
 ### Get
 
 * getActionsOnBoard
-* getBoardMembers 
-* getBoards 
-* getCard 
-* getCardsForList 
-* getCardsOnBoard 
-* getCardsOnBoardWithExtraParams 
-* getCardsOnList 
+* getBoardMembers
+* getBoards
+* getCard
+* getCardsForList
+* getCardsOnBoard
+* getCardsOnBoardWithExtraParams
+* getCardsOnList
 * getCardsOnListWithExtraParams
 * getCardStickers
-* getChecklistsOnCard 
-* getCustomFieldsOnBoard 
-* getLabelsForBoard 
-* getListsOnBoard 
-* getListsOnBoardByFilter 
-* getMember 
-* getMemberCards 
-* getOrgBoards 
-* getOrgMembers 
+* getChecklistsOnCard
+* getCustomFieldsOnBoard
+* getLabelsForBoard
+* getListsOnBoard
+* getListsOnBoardByFilter
+* getMember
+* getMemberCards
+* getOrgBoards
+* getOrgMembers
 
 ### Update
 
-* renameList 
-* updateBoardPref 
-* updateCard 
-* updateCardDescription 
-* updateCardList 
-* updateCardName 
-* updateChecklist 
-* updateLabel 
-* updateLabelColor 
-* updateLabelName 
+* renameList
+* updateBoardPref
+* updateCard
+* updateCardDescription
+* updateCardList
+* updateCardName
+* updateChecklist
+* updateLabel
+* updateLabelColor
+* updateLabelName
 
-Everything that is not available as a function can be requested by calling `makeRequest`.
+Everything that is not available as a function can be requested by calling `makeRequest` .
 
 ## History
 
@@ -144,7 +154,7 @@ Everything that is not available as a function can be requested by calling `make
 
 * Rename list fixed
 * Handle API rate limit by retries 
-* New function `addCardWithExtraParams` 
+* New function `addCardWithExtraParams`
 
 ### 0.7.0
 
@@ -174,11 +184,11 @@ Everything that is not available as a function can be requested by calling `make
 
 * Support of promises
 * Basic support of Labeling:
-  * getLabelsForBoard
-  * addLabelOnBoard
-  * deleteLabel
-  * addLabelToCard
-  * deleteLabelFromCard
+  + getLabelsForBoard
+  + addLabelOnBoard
+  + deleteLabel
+  + addLabelToCard
+  + deleteLabelFromCard
 
 ### 0.4.1
 
