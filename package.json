@@ -1,6 +1,6 @@
 {
     "name": "trello-new",
-    "version": "0.10.1",
+    "version": "1.0.0",
     "author": "mmoomocow",
     "description": "This module provides an easy way to make requests to the Trello API.",
     "contributors": [
