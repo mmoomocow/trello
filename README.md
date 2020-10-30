@@ -12,7 +12,7 @@ This is a wrapper for some of the Trello HTTP API. Please feel free to add any o
 
 ## Installation
 
-    npm install trello
+    npm install mmoomocow/trello
 
 ## Usage
 
